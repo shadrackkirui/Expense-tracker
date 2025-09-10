@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { PlusCircle, Trash2 } from 'lucide-react'
+import ExportCSV from "../components/ExportCSV";
+
 
 export default function ExpensesPage() {
   const [expenses, setExpenses] = useState([])
@@ -92,8 +94,11 @@ export default function ExpensesPage() {
               <Trash2 className="w-5 h-5" />
             </button>
           </li>
+        
         ))}
       </ul>
+      <ExportCSV expenses={expenses} />
+
     </div>
   )
 }
