@@ -10,8 +10,8 @@ const ExportCSV = ({ expenses }) => {
     // Define CSV header
     const header = ["Date", "Description", "Amount (Ksh)"];
     const rows = expenses.map((exp) => [
-      exp.date,
-      exp.description,
+      new Date(exp.id).toLocaleDateString(),
+      exp.desc,
       exp.amount,
     ]);
 
